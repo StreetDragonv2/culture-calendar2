@@ -1,3 +1,5 @@
+import Header from './Header'
+
 import './css/font.css'
 import './css/globals.css'
 
@@ -10,10 +12,8 @@ export default function RootLayout({ children }) {
 			</head>
 			<body>
 				<div className='wrapper'>
-					<div id='header' className='header'>
-
-					</div>
-					<div id='main'>
+					<Header></Header>
+					<div id='contWrap'>
 						<div className='size'>
 							{children}
 						</div>

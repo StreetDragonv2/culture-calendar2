@@ -1,12 +1,31 @@
-/* ChangwonDangamAsac */
+/* GmarketSans */
 @font-face{
-	font-family: 'ChangwonDangamAsac';
+	font-family: 'GmarketSans';
+	font-weight:300;
+	font-display: swap;
+	src:
+		url('/font/GmarketSansTTFLight.ttf') format('truetype'),
+		url('/font/GmarketSansLight.otf') format('opentype');
+}
+@font-face{
+	font-family: 'GmarketSans';
+	font-weight:400;
+	font-display: swap;
+	src:
+		url('/font/GmarketSansTTFMedium.ttf') format('truetype'),
+		url('/font/GmarketSansMedium.otf') format('opentype');
+}
+
+@font-face{
+	font-family: 'GmarketSans';
 	font-weight:700;
 	font-display: swap;
 	src:
-		url('/font/ChangwonDangamAsac-Bold_0712.ttf') format('truetype'),
-		url('/font/ChangwonDangamAsac-Bold_0712.otf') format('opentype');
+		url('/font/GmarketSansTTFBold.ttf') format('truetype'),
+		url('/font/GmarketSansBold.otf') format('opentype');
 }
+.gsans{font-family: 'GmarketSans';}
+
 /* Pretendard */
 @font-face {
 	font-family: 'Pretendard';
@@ -21,9 +40,7 @@
 	font-family: 'Pretendard';
 	font-weight: 700;
 	font-display: swap;
-	src: 
-		url('/font/Pretendard-Bold.subset.woff2') format('woff2'), 
-		url('/font/Pretendard-Bold.subset.woff') format('woff');
+	src:url('/font/Pretendard-Bold.subset.woff') format('woff');
 }
 
 @font-face {

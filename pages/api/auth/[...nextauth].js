@@ -7,13 +7,15 @@ import bcrypt from 'bcrypt';
 export const authOptions = {
 	providers: [
 		GithubProvider({
+			id: "github-credential",
 			clientId: process.env.GITHUB_ID,
 			clientSecret: process.env.GITHUB_SECRET ,
 		}),
 
 		CredentialsProvider({
 			//1. 로그인페이지 폼 자동생성해주는 코드 
-			name: "credentials",
+			id: "id-password-credential",
+			name: "Credentials",
 			credentials: {
 				id: { label: "id", type: "text" },
 				password: { label: "password", type: "password" },
@@ -53,7 +55,7 @@ export const authOptions = {
 			if (user) {
 				token.user = {};
 				token.user.name = user.name
-				token.user.email = user.email
+				token.user.id = user.id
 			}
 			return token;
 		},
@@ -63,6 +65,9 @@ export const authOptions = {
 			return session;
 		},
 	},
-	secret: process.env.NEXTAUTH_SECRET 
+	pages:{
+		signIn:'/auth',
+	},
+	secret: process.env.NEXTAUTH_SECRET
 };
 export default NextAuth(authOptions); 
